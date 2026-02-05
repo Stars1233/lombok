@@ -5,10 +5,6 @@ import lombok.extern.java.Log;
 class LoggerJulAccessPublic {
 }
 
-@Log(access = AccessLevel.MODULE)
-class LoggerJulAccessModule {
-}
-
 @Log(access = AccessLevel.PROTECTED)
 class LoggerJulAccessProtected {
 }

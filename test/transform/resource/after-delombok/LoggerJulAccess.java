@@ -5,12 +5,6 @@ class LoggerJulAccessPublic {
 	public static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(LoggerJulAccessPublic.class.getName());
 
 }
-class LoggerJulAccessModule {
-	@java.lang.SuppressWarnings("all")
-	@lombok.Generated
-	static final java.util.logging.Logger log = java.util.logging.Logger.getLogger(LoggerJulAccessModule.class.getName());
-
-}
 class LoggerJulAccessProtected {
 	@java.lang.SuppressWarnings("all")
 	@lombok.Generated

@@ -5,12 +5,6 @@ class LoggerFloggerAccessPublic {
 	public static final com.google.common.flogger.FluentLogger log = com.google.common.flogger.FluentLogger.forEnclosingClass();
 
 }
-class LoggerFloggerAccessModule {
-	@java.lang.SuppressWarnings("all")
-	@lombok.Generated
-	static final com.google.common.flogger.FluentLogger log = com.google.common.flogger.FluentLogger.forEnclosingClass();
-
-}
 class LoggerFloggerAccessProtected {
 	@java.lang.SuppressWarnings("all")
 	@lombok.Generated

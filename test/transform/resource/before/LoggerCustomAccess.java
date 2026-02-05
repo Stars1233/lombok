@@ -6,10 +6,6 @@ import lombok.CustomLog;
 class LoggerCustomAccessPublic {
 }
 
-@CustomLog(access = AccessLevel.MODULE)
-class LoggerCustomAccessModule {
-}
-
 @CustomLog(access = AccessLevel.PROTECTED)
 class LoggerCustomAccessProtected {
 }

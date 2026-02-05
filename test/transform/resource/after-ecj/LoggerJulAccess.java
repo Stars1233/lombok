@@ -9,15 +9,6 @@ import lombok.extern.java.Log;
     super();
   }
 }
-@Log(access = AccessLevel.MODULE) class LoggerJulAccessModule {
-  static final @java.lang.SuppressWarnings("all") @lombok.Generated java.util.logging.Logger log = java.util.logging.Logger.getLogger(LoggerJulAccessModule.class.getName());
-  <clinit>() {
-  }
-
-  LoggerJulAccessModule() {
-    super();
-  }
-}
 @Log(access = AccessLevel.PROTECTED) class LoggerJulAccessProtected {
   protected static final @java.lang.SuppressWarnings("all") @lombok.Generated java.util.logging.Logger log = java.util.logging.Logger.getLogger(LoggerJulAccessProtected.class.getName());
   <clinit>() {

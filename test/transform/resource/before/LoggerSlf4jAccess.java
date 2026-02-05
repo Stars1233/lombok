@@ -5,10 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 class LoggerSlf4jAccessPublic {
 }
 
-@Slf4j(access = AccessLevel.MODULE)
-class LoggerSlf4jAccessModule {
-}
-
 @Slf4j(access = AccessLevel.PROTECTED)
 class LoggerSlf4jAccessProtected {
 }

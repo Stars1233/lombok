@@ -5,10 +5,6 @@ import lombok.extern.flogger.Flogger;
 class LoggerFloggerAccessPublic {
 }
 
-@Flogger(access = AccessLevel.MODULE)
-class LoggerFloggerAccessModule {
-}
-
 @Flogger(access = AccessLevel.PROTECTED)
 class LoggerFloggerAccessProtected {
 }

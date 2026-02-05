@@ -9,15 +9,6 @@ import lombok.CustomLog;
     super();
   }
 }
-@CustomLog(access = AccessLevel.MODULE) class LoggerCustomAccessModule {
-  static final @java.lang.SuppressWarnings("all") @lombok.Generated MyLogger log = MyLoggerFactory.create(LoggerCustomAccessModule.class);
-  <clinit>() {
-  }
-
-  LoggerCustomAccessModule() {
-    super();
-  }
-}
 @CustomLog(access = AccessLevel.PROTECTED) class LoggerCustomAccessProtected {
   protected static final @java.lang.SuppressWarnings("all") @lombok.Generated MyLogger log = MyLoggerFactory.create(LoggerCustomAccessProtected.class);
   <clinit>() {

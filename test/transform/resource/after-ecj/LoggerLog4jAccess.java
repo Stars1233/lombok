@@ -9,15 +9,6 @@ import lombok.extern.log4j.Log4j;
     super();
   }
 }
-@Log4j(access = AccessLevel.MODULE) class LoggerLog4jAccessModule {
-  static final @java.lang.SuppressWarnings("all") @lombok.Generated org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(LoggerLog4jAccessModule.class);
-  <clinit>() {
-  }
-
-  LoggerLog4jAccessModule() {
-    super();
-  }
-}
 @Log4j(access = AccessLevel.PROTECTED) class LoggerLog4jAccessProtected {
   protected static final @java.lang.SuppressWarnings("all") @lombok.Generated org.apache.log4j.Logger log = org.apache.log4j.Logger.getLogger(LoggerLog4jAccessProtected.class);
   <clinit>() {

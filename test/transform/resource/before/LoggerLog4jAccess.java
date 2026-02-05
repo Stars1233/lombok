@@ -5,10 +5,6 @@ import lombok.extern.log4j.Log4j;
 class LoggerLog4jAccessPublic {
 }
 
-@Log4j(access = AccessLevel.MODULE)
-class LoggerLog4jAccessModule {
-}
-
 @Log4j(access = AccessLevel.PROTECTED)
 class LoggerLog4jAccessProtected {
 }

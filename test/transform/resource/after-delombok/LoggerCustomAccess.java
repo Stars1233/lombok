@@ -5,12 +5,6 @@ class LoggerCustomAccessPublic {
 	public static final MyLogger log = MyLoggerFactory.create(LoggerCustomAccessPublic.class);
 
 }
-class LoggerCustomAccessModule {
-	@java.lang.SuppressWarnings("all")
-	@lombok.Generated
-	static final MyLogger log = MyLoggerFactory.create(LoggerCustomAccessModule.class);
-
-}
 class LoggerCustomAccessProtected {
 	@java.lang.SuppressWarnings("all")
 	@lombok.Generated

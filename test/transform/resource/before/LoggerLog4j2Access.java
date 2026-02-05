@@ -1,12 +1,9 @@
+// version 8: Our Log4j2 version doesn't support Java 6
 import lombok.AccessLevel;
 import lombok.extern.log4j.Log4j2;
 
 @Log4j2(access = AccessLevel.PUBLIC)
 class LoggerLog4j2AccessPublic {
-}
-
-@Log4j2(access = AccessLevel.MODULE)
-class LoggerLog4j2AccessModule {
 }
 
 @Log4j2(access = AccessLevel.PROTECTED)

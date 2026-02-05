@@ -5,10 +5,6 @@ import lombok.extern.apachecommons.CommonsLog;
 class LoggerCommonsAccessPublic {
 }
 
-@CommonsLog(access = AccessLevel.MODULE)
-class LoggerCommonsAccessModule {
-}
-
 @CommonsLog(access = AccessLevel.PROTECTED)
 class LoggerCommonsAccessProtected {
 }

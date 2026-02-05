@@ -9,15 +9,6 @@ import lombok.extern.apachecommons.CommonsLog;
     super();
   }
 }
-@CommonsLog(access = AccessLevel.MODULE) class LoggerCommonsAccessModule {
-  static final @java.lang.SuppressWarnings("all") @lombok.Generated org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(LoggerCommonsAccessModule.class);
-  <clinit>() {
-  }
-
-  LoggerCommonsAccessModule() {
-    super();
-  }
-}
 @CommonsLog(access = AccessLevel.PROTECTED) class LoggerCommonsAccessProtected {
   protected static final @java.lang.SuppressWarnings("all") @lombok.Generated org.apache.commons.logging.Log log = org.apache.commons.logging.LogFactory.getLog(LoggerCommonsAccessProtected.class);
   <clinit>() {
