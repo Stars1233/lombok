@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2013-2019 The Project Lombok Authors.
+ * Copyright (C) 2013-2026 The Project Lombok Authors.
  * 
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -102,23 +102,30 @@ public final class ConfigurationDataType {
 		SIMPLE_TYPES = map;
 	}
 	
-	private static ConfigurationValueParser enumParser(Type enumType) {
+	private static ConfigurationValueParser enumParser(final Type enumType) {
 		final Class<?> type = (Class<?>) enumType;
 		@SuppressWarnings("rawtypes") final Class rawType = type;
 		
 		return new ConfigurationValueParser() {
 			@SuppressWarnings("unchecked")
 			@Override public Object parse(String value) {
-				try {
-					return Enum.valueOf(rawType, value);
-				} catch (Exception e) {
-					StringBuilder sb = new StringBuilder();
-					for (int i = 0; i < value.length(); i++) {
-						char c = value.charAt(i);
-						if (Character.isUpperCase(c) && i > 0) sb.append("_");
-						sb.append(Character.toUpperCase(c));
+				if (enumType instanceof Class<?> && MappedConfigEnum.class.isAssignableFrom(type)) {
+					for (Object enumVal : ((Class<?>) enumType).getEnumConstants()) {
+						if (((MappedConfigEnum) enumVal).matches(value)) return enumVal;
 					}
-					return Enum.valueOf(rawType, sb.toString());
+					throw new IllegalArgumentException("Invalid value: " + value);
+				} else {
+					try {
+						return Enum.valueOf(rawType, value);
+					} catch (Exception e) {
+						StringBuilder sb = new StringBuilder();
+						for (int i = 0; i < value.length(); i++) {
+							char c = value.charAt(i);
+							if (Character.isUpperCase(c) && i > 0) sb.append("_");
+							sb.append(Character.toUpperCase(c));
+						}
+						return Enum.valueOf(rawType, sb.toString());
+					}
 				}
 			}
 			
@@ -129,7 +136,7 @@ public final class ConfigurationDataType {
 			@Override public String exampleValue() {
 				ExampleValueString evs = type.getAnnotation(ExampleValueString.class);
 				if (evs != null) return evs.value();
-				return Arrays.toString(type.getEnumConstants()).replace(",", " |");
+				return Arrays.toString(type.getEnumConstants()).replace(",", " | ");
 			}
 		};
 	}

@@ -47,7 +47,6 @@ import lombok.core.JacksonAnnotationType;
 import lombok.core.AST.Kind;
 import lombok.core.configuration.JacksonVersion;
 import lombok.core.handlers.HandlerUtil;
-import lombok.eclipse.Eclipse;
 import lombok.eclipse.EclipseAnnotationHandler;
 import lombok.eclipse.EclipseNode;
 import lombok.experimental.Accessors;
